@@ -6,3 +6,20 @@ coverage/
 *.log
 .env*
 !.env.example
+# IDE - VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# IDE - IntelliJ/WebStorm
+.idea/
+
+# Production
+.vercel
+.netlify
+
+# TypeScript
+*.tsbuildinfo
