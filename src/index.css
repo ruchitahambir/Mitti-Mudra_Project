@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Georgia", serif;
+
+  --color-natural-bg: #fdfaf5;
+  --color-natural-card: #fffcf8;
+  --color-natural-text: #3d342d;
+  --color-natural-border: #e7dfd5;
+  --color-natural-ink: #2c1b0e;
+  
+  --color-gold-accent: #d4af37;
+  --color-emerald-accent: #064e3b;
+  --color-blue-accent: #1e3a8a;
+  --color-amber-accent: #b45309;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  @keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-natural-bg text-natural-text font-serif antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .gradient-animate {
+    background: linear-gradient(270deg, var(--color-blue-accent), var(--color-emerald-accent), var(--color-amber-accent));
+    background-size: 600% 600%;
+    animation: gradient-move 15s ease infinite;
+  }
+
+  .earthy-card {
+    @apply bg-natural-card border border-natural-border overflow-hidden transition-all duration-300;
+    box-shadow: 0 4px 12px rgba(93, 64, 55, 0.08);
+  }
+
+  .price-tag {
+    @apply font-sans font-bold text-amber-900;
+  }
+
+  .serif-title {
+    @apply font-serif italic;
+  }
+
+  .gold-border {
+    border-bottom: 2px solid var(--color-gold-accent);
+  }
+}
+
+

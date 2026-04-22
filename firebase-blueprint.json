@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "products": {
+      "title": "Artisanal Product",
+      "description": "Unique handcrafted goods including pottery, textiles, jewelry, and beauty products.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Display name of the product" },
+        "description": { "type": "string", "description": "Detailed artisanal story and usage" },
+        "price": { "type": "number", "description": "Price in INR" },
+        "category": { "type": "string", "enum": ["Pottery", "Textiles", "Jewelry", "Beauty"] },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "vendorId": { "type": "string", "description": "Reference to the vendor" },
+        "highlights": { "type": "array", "items": { "type": "string" } },
+        "stock": { "type": "number" }
+      },
+      "required": ["name", "price", "category", "vendorId"]
+    },
+    "vendors": {
+      "title": "Artisan Collective",
+      "description": "Master craft communities and individual artisans.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "location": { "type": "string" },
+        "story": { "type": "string" },
+        "image": { "type": "string" },
+        "specialty": { "type": "string" }
+      },
+      "required": ["name", "location", "story"]
+    },
+    "orders": {
+      "title": "Export Order",
+      "description": "Details of an international export-import purchase.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "items": { "type": "array" },
+        "total": { "type": "number" },
+        "status": { "type": "string", "enum": ["pending", "processing", "shipped", "delivered"] },
+        "shippingAddress": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "firestore": {
+    "products/{productId}": {
+      "schema": "products",
+      "description": "Collection of artisanal products"
+    },
+    "vendors/{vendorId}": {
+      "schema": "vendors",
+      "description": "Collection of artisan partner stories"
+    },
+    "orders/{orderId}": {
+      "schema": "orders",
+      "description": "Customer export orders"
+    }
+  }
+}
