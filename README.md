@@ -2,6 +2,9 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
+![Gemini Pro](https://img.shields.io/badge/Powered%20by-Google%20Gemini-blue?logo=google-gemini)
+
+
 ## 🧠 System Architecture
 
 The core of this project is the interaction between the **Mati-Kala** (Earth-Art) frontend and the **Gemini Pro** engine:
