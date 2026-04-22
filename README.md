@@ -12,9 +12,25 @@ View your app in AI Studio: https://ai.studio/apps/c491e48a-484e-460e-be97-190b7
 
 **Prerequisites:**  Node.js
 
+# Mitti-Mudra Project (Gemini)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+> **Mitti (Earth) meets Mudra (Gesture/Currency)**: An AI-driven integration exploring digital financial gestures powered by Google Gemini.
+
+## 🌟 Overview
+This project leverages the **Google Gemini Pro** model to pioneer innovative data modeling within a specialized financial ecosystem. It focuses on interpreting "Mudras" (digital financial gestures) through the lens of foundational earth-based elements.
+
+## 🚀 Technical Setup
+- **Framework:** Vite + TypeScript
+- **AI Engine:** Google Gemini SDK
+- **Backend:** Node.js (server.ts)
+
+## 🛠️ Installation
+1. Clone the repo.
+2. Run `npm install`.
+3. Create a `.env.local` file and add your `GEMINI_API_KEY`.
+4. Launch the dev server: `npm run dev`.
+
+## 📂 Project Structure
+- `/src`: Frontend Mati-Kala interface.
+- `server.ts`: Backend logic for Gemini interactions.
+- `metadata.json`: Project configuration and AI parameters.
