@@ -13,5 +13,5 @@
       "name": "res"
     }
   ],
-  "scriptFile": "../dist/mudra/index.js"
+  "scriptFile": "../dist/mudra/index.ts"
 }
